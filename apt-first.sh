@@ -6,7 +6,7 @@ sudo apt install git curl -y && \
 rm -rf apt-fast && \
 git clone https://github.com/ilikenwf/apt-fast.git && \
 cd apt-fast && \
-sudo mkdir -p /usr/local/bin && \ # ここを追加
+sudo mkdir -p /usr/local/bin && \
 sudo cp apt-fast /usr/local/bin/apt-fast && \
 sudo chmod +x /usr/local/bin/apt-fast && \
 sudo cp apt-fast.conf /etc/apt-fast.conf && \
