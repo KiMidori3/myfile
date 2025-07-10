@@ -2,7 +2,7 @@ sudo dpkg --configure -a && \
 sudo apt update -y && \
 sudo apt upgrade -y && \
 sudo apt autoremove -y && \
-sudo apt install git curl -y && \
+sudo apt install git curl aria2c -y && \
 rm -rf apt-fast && \
 git clone https://github.com/ilikenwf/apt-fast.git && \
 cd apt-fast && \
