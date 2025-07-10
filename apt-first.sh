@@ -1,9 +1,11 @@
+env LANGUAGE=C LC_MESSAGES=C xdg-user-dirs-gtk-update
+setxkbmap -model jp106 -layout jp -option ctrl:nocaps
 sudo dpkg --configure -a
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt autoremove -y
 sudo apt install git curl snapd -y
-sudo snap install aria2c
+sudo snap install --classic aria2csudo code
 rm -rf apt-fast
 git clone https://github.com/ilikenwf/apt-fast.git
 cd apt-fast
@@ -12,7 +14,11 @@ sudo cp apt-fast /usr/local/bin/apt-fast
 sudo chmod +x /usr/local/bin/apt-fast
 sudo cp apt-fast.conf /etc/apt-fast.conf
 sudo apt-fast update -y
-sudo apt-fast install nodejs npm -y
+curl -fsSL https://ppa.floorp.app/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/Floorp.gpg
+sudo curl -sS --compressed -o /etc/apt/sources.list.d/Floorp.list 'https://ppa.floorp.app/Floorp.list'
+sudo apt update
+sudo apt-fast install nodejs npm language-pack-ja fonts-noto-cjk floorp -y
+curl -s https://raw.githubusercontent.com/karaage0703/ubuntu-setup/master/install-vscode.sh | sh
 sudo npm -g install @google/gemini-cli
 curl -fsSL https://tailscale.com/install.sh | sh
 sudo tailscale up --ssh
