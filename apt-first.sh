@@ -16,8 +16,11 @@ sudo cp apt-fast.conf /etc/apt-fast.conf
 sudo apt-fast update -y
 curl -fsSL https://ppa.floorp.app/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/Floorp.gpg
 sudo curl -sS --compressed -o /etc/apt/sources.list.d/Floorp.list 'https://ppa.floorp.app/Floorp.list'
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+sudo sh -c 'echo "deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 sudo apt update
-sudo apt-fast install nodejs npm language-pack-ja fonts-noto-cjk floorp -y
+sudo apt-fast install nodejs npm language-pack-ja fonts-noto-cjk floorp code -y
 curl -s https://raw.githubusercontent.com/karaage0703/ubuntu-setup/master/install-vscode.sh | sh
 sudo npm -g install @google/gemini-cli
 curl -fsSL https://tailscale.com/install.sh | sh
