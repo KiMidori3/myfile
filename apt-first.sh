@@ -21,4 +21,4 @@ sudo apt upgrade -y && \
 sudo apt autoremove -y && \
 sudo apt clean && \
 sudo apt autoclean && \
-sudo shutdown now
+sudo systemctl reboot
