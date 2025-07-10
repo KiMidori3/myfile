@@ -5,7 +5,7 @@ sudo apt update -y
 sudo apt upgrade -y
 sudo apt autoremove -y
 sudo apt install git curl snapd -y
-sudo snap install --classic aria2csudo code
+sudo snap install --classic aria2c code
 rm -rf apt-fast
 git clone https://github.com/ilikenwf/apt-fast.git
 cd apt-fast
