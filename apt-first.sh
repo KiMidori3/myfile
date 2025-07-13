@@ -20,7 +20,7 @@ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microso
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 sudo apt update
-sudo apt-fast install nodejs npm language-pack-ja fonts-noto-cjk floorp code -y
+sudo apt-fast install nodejs npm language-pack-ja fonts-noto-cjk floorp code virt-manager -y
 curl -s https://raw.githubusercontent.com/karaage0703/ubuntu-setup/master/install-vscode.sh | sh
 sudo npm -g install @google/gemini-cli
 curl -fsSL https://tailscale.com/install.sh | sh
