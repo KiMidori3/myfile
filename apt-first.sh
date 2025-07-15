@@ -33,4 +33,4 @@ sudo apt full-upgrade -y
 sudo apt autoremove -y
 sudo apt clean
 sudo apt autoclean
-sudo do-release-upgrade
+yes | sudo do-release-upgrade
