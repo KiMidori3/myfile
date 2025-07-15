@@ -28,7 +28,9 @@ curl -fsSL https://tailscale.com/install.sh | sh
 sudo tailscale up --ssh
 sudo apt update -y
 sudo apt upgrade -y
+sudo apt dist-upgrade -y
+sudo apt full-upgrade -y
 sudo apt autoremove -y
 sudo apt clean
 sudo apt autoclean
-sudo systemctl reboot
+sudo do-release-upgrade
