@@ -6,7 +6,6 @@ sudo dpkg --configure -a
 sudo aptitude install -f
 sudo aptitude update -y
 sudo aptitude upgrade -y
-sudo aptitude autoremove -y
 sudo aptitude install git curl snapd -y
 sudo snap install --classic aria2c
 sudo rm -rf apt-fast
@@ -30,7 +29,6 @@ sudo aptitude update -y
 sudo aptitude upgrade -y
 sudo aptitude dist-upgrade -y
 sudo aptitude full-upgrade -y
-sudo aptitude autoremove -y
 sudo aptitude clean
 sudo aptotude autoclean
 yes | sudo do-release-upgrade
