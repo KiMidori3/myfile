@@ -30,5 +30,5 @@ sudo aptitude upgrade -y
 sudo aptitude dist-upgrade -y
 sudo aptitude full-upgrade -y
 sudo aptitude clean
-sudo aptotude autoclean
+sudo aptitude autoclean
 yes | sudo do-release-upgrade
