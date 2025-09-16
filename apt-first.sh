@@ -1,5 +1,7 @@
 env LANGUAGE=C LC_MESSAGES=C xdg-user-dirs-gtk-update
 setxkbmap -model jp106 -layout jp -option ctrl:nocaps
+sudo apt-get update 
+sudo apt-get install aptitude
 sudo aptitude update -y
 sudo aptitude install -f
 sudo dpkg --configure -a
