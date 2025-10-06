@@ -22,7 +22,7 @@ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microso
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 sudo aptitude update -y
-sudo aptitude install nodejs npm fonts-noto-cjk code virt-manager cockpit neofetch -y
+sudo aptitude install nodejs npm fonts-noto-cjk code virt-manager cockpit neofetch byobu -y
 neofetch
 sudo npm -g install @google/gemini-cli
 curl -fsSL https://tailscale.com/install.sh | sh
